@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>A&B perfumaria</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <a href="#homespray">Home spray</a>
+        <a href="#">Água de lençóis</a>
+        <a href="#">Perfumes</a>
+        <a href="#">Aromatizador de ambientes</a>
+        <a href="#">Comprar</a>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+      <img src="../img/logo.png" alt="" class="logo" />
+      <nav>
+        <a href="#homespray">Home spray</a>
+        <a href="#">Aqua de lençois</a>
+        <a href="#">Perfumes</a><a href="#">Aromatizador de ambientes</a>
+        <a href="#">Comprar</a>
+      </nav>
+    </header>
+    <main>
+      <section class="home">
+        <div class="home-content">
+          <h1>Nada se compara<br />ao aroma perfeito</h1>
+          <p>Perfumes e aromas que transformam ambientes e memórias.</p>
+          <a href="#" class="btn">Ver produtos</a>
+        </div>
+      </section>
+      <section class="Spray" id="homespray">
+        <div class="spray_content"><h1>Nada se compara<br />ao aroma perfeito</h1>
+          <p>Perfumes e aromas que transformam ambientes e memórias.</p>
+          <a href="#" class="btn">Ver produtos</</div>
+      </section>
+    </main>
+    <script>
+      const menu = document.querySelector(".menu-mobile");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      menu.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

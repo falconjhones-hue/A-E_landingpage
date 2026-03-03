@@ -8,11 +8,11 @@ class HomeTemp implements ITemplate
 {
     public function cabecalho()
     {
-        include __DIR__ . '/../public/partials/header.php';
+        include __DIR__ . '/../public/partials/Header.php';
     }
     public function rodape()
     {
-        include __DIR__ . '/../public/partials/footer.php';
+        include __DIR__ . '/../public/partials/Footer.php';
     }
     public function layout($caminho, $parametro = null)
     {

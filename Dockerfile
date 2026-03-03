@@ -1,9 +1,7 @@
 FROM php:8.2-apache
 RUN a2enmod rewrite
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-RUN echo "DirectoryIndex index.php index.html" > /etc/apache2/conf-available/docker-php.conf && a2enconf docker-php
+
 COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html/
+RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 EXPOSE 80

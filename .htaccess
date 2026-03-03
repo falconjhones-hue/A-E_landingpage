@@ -2,6 +2,7 @@ RewriteEngine on
 RewriteBase /
 RewriteCond %{REQUEST_URI} !^/assets/
 RewriteCond %{REQUEST_URI} !^/public/
+Options -MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 

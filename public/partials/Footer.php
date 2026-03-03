@@ -1,4 +1,4 @@
-<script src="<?= BASE_URL ?>assets/js/Menu.js"></script>
+<script src="<?= BASE_URL ?>/public/assets/js/Menu.js"></script>
 </body>
 
 </html>

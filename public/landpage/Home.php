@@ -14,7 +14,7 @@
     </div>
 
     <div class="overlay" id="overlay"></div>
-    <img src="/assets/img/logo.png" alt="" class="logo" />
+    <img src="../assets/img/logo.png" alt="" class="logo" />
     <nav>
         <a href="#homespray">Home spray</a>
         <a href="#">Aqua de lençois</a>
@@ -35,17 +35,17 @@
     </section>
 </main>
 <script>
-const menu = document.querySelector(".menu-mobile");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
+    const menu = document.querySelector(".menu-mobile");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
 
-menu.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-});
+    menu.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
 
-overlay.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-});
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+    });
 </script>
